@@ -1,0 +1,17 @@
+{
+  "settings": {"number_of_shards": 1, "number_of_replicas": 0},
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "relation_id":   {"type": "keyword"},
+      "source_id":     {"type": "keyword"},
+      "target_id":     {"type": "keyword"},
+      "type":          {"type": "keyword"},
+      "weight":        {"type": "float"},
+      "evidence":      {"type": "keyword"},
+      "evidence_text": {"type": "text"},
+      "method":        {"type": "keyword"},
+      "distance_m":    {"type": "float"}
+    }
+  }
+}

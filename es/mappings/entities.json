@@ -1,0 +1,38 @@
+{
+  "settings": {"number_of_shards": 1, "number_of_replicas": 0},
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "entity_id":      {"type": "keyword"},
+      "type":           {"type": "keyword"},
+      "canonical_name": {"type": "text", "fields": {"raw": {"type": "keyword"}}},
+      "aliases":        {"type": "text", "fields": {"raw": {"type": "keyword"}}},
+      "extractor":      {"type": "keyword"},
+      "mentions": {
+        "type": "nested",
+        "properties": {
+          "doc_id":   {"type": "keyword"},
+          "chunk_id": {"type": "keyword"},
+          "start":    {"type": "integer"},
+          "end":      {"type": "integer"},
+          "text":     {"type": "text"}
+        }
+      },
+      "attributes": {
+        "properties": {
+          "date":         {"type": "date"},
+          "kind":         {"type": "keyword"},
+          "value":        {"type": "integer"},
+          "seats":        {"type": "integer"},
+          "cutoff_marks": {"type": "integer"},
+          "board":        {"type": "keyword"},
+          "locality":     {"type": "keyword"},
+          "osm_ids":      {"type": "keyword"},
+          "location":     {"type": "geo_point"},
+          "short_name":   {"type": "keyword"},
+          "number":       {"type": "keyword"}
+        }
+      }
+    }
+  }
+}

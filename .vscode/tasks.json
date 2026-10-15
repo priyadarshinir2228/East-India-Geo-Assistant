@@ -1,0 +1,74 @@
+{
+    // Terminal > Run Task... Each task runs in its own VS Code terminal.
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}",
+        "env": { "PYTHONIOENCODING": "utf-8" }
+    },
+    "tasks": [
+        {
+            "label": "1. Services: docker compose up",
+            "type": "shell",
+            "command": "docker compose up -d; docker compose ps",
+            "problemMatcher": []
+        },
+        {
+            "label": "2. LLM: llama-server (port 8081)",
+            "type": "shell",
+            "command": "D:\\llama-bin\\llama-server.exe -m models\\Qwen2.5-3B-Instruct-Q4_K_M.gguf --host 127.0.0.1 --port 8081 -c 8192 --jinja",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "3. Status: check all services",
+            "type": "shell",
+            "command": "docker compose ps; .venv\\Scripts\\python.exe -m es.cluster_health; .venv\\Scripts\\python.exe -m geoserver.check_access; try { (Invoke-RestMethod http://127.0.0.1:8081/health -TimeoutSec 30).status | ForEach-Object { \"llama-server: $_\" } } catch { 'llama-server: not running' }",
+            "problemMatcher": []
+        },
+        {
+            "label": "4. Run all: setup",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe -m scripts.run_all setup",
+            "problemMatcher": []
+        },
+        {
+            "label": "5. Run all: ingest",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe -m scripts.run_all ingest",
+            "problemMatcher": []
+        },
+        {
+            "label": "6. Run all: eval",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe -m scripts.run_all eval",
+            "problemMatcher": []
+        },
+        {
+            "label": "7. Ask the assistant (CLI)",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe -m app.cli \"${input:question}\"",
+            "problemMatcher": []
+        },
+        {
+            "label": "8. UI: Streamlit (port 8501)",
+            "type": "shell",
+            "command": ".venv\\Scripts\\streamlit.exe run app/streamlit_app.py --server.address 127.0.0.1",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "9. Tests: pytest",
+            "type": "shell",
+            "command": ".venv\\Scripts\\python.exe -m pytest -q",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "question",
+            "type": "promptString",
+            "description": "Question for the assistant",
+            "default": "Which board is Hare School affiliated with?"
+        }
+    ]
+}

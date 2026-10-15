@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+models/
+data/geoserver/*.gpkg-*
+evidence/*.tmp
+data/work/
+evidence/requests.jsonl
+llama.cpp/
+.vscode/extensions.json
+*.vsix

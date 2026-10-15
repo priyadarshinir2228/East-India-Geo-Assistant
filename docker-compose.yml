@@ -1,0 +1,56 @@
+# Single-node Elasticsearch + Kibana + GeoServer for the PoC.
+# Start: docker compose up -d     Stop: docker compose down
+services:
+  es-setup:
+    image: elasticsearch:8.17.4
+    # One-shot: waits for ES, then sets the kibana_system password.
+    command: >
+      bash -c 'until curl -s -u "elastic:${ELASTIC_PASSWORD}" http://elasticsearch:9200/_cluster/health | grep -q status; do sleep 3; done;
+      curl -s -u "elastic:${ELASTIC_PASSWORD}" -H "Content-Type: application/json"
+      http://elasticsearch:9200/_security/user/kibana_system/_password -d "{\"password\":\"${KIBANA_PASSWORD}\"}"; echo kibana password set'
+    depends_on: [elasticsearch]
+
+  elasticsearch:
+    image: elasticsearch:8.17.4
+    container_name: ea-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - cluster.name=east-india-poc
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g          # fixed heap
+      - xpack.security.enabled=true          # authentication on
+      - xpack.security.http.ssl.enabled=false # localhost only PoC, see PROJECT DOCUMENT
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+    ports: ["127.0.0.1:9200:9200"]
+    volumes: [esdata:/usr/share/elasticsearch/data]
+    mem_limit: 3g
+
+  kibana:
+    image: kibana:8.17.4
+    container_name: ea-kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=kibana_system
+      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+      - NODE_OPTIONS=--max-old-space-size=768
+    ports: ["127.0.0.1:5601:5601"]
+    depends_on: [es-setup]
+    mem_limit: 1g
+
+  geoserver:
+    image: kartoza/geoserver:2.26.1
+    container_name: ea-geoserver
+    environment:
+      - GEOSERVER_ADMIN_USER=admin
+      - GEOSERVER_ADMIN_PASSWORD=${GEOSERVER_ADMIN_PASSWORD}
+      - INITIAL_MEMORY=512M
+      - MAXIMUM_MEMORY=1G
+      - SAMPLE_DATA=false
+    ports: ["127.0.0.1:8080:8080"]
+    volumes:
+      - ./data/geoserver:/opt/east_india_data:ro
+      - gsdata:/opt/geoserver/data_dir
+    mem_limit: 1536m
+
+volumes:
+  esdata:
+  gsdata:

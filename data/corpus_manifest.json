@@ -1,0 +1,342 @@
+[
+ {
+  "doc_id": "circ-kol-2025-031",
+  "file": "circular_DEO_KOL_2025_031.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-004",
+  "file": "circular_DEO_KOL_2026_004.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-012",
+  "file": "circular_DEO_KOL_2026_012.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-014",
+  "file": "circular_DEO_KOL_2026_014.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-018",
+  "file": "circular_DEO_KOL_2026_018.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-021",
+  "file": "circular_DEO_KOL_2026_021.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-djl-2026-002",
+  "file": "circular_DEO_DJL_2026_002.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-djl-2026-005",
+  "file": "circular_DEO_DJL_2026_005.md",
+  "kind": "circular"
+ },
+ {
+  "doc_id": "circ-kol-2026-007",
+  "file": "circular_DEO_KOL_2026_007.pdf",
+  "kind": "circular_pdf"
+ },
+ {
+  "doc_id": "guide-admission-2026",
+  "file": "guideline_admission_2026.md",
+  "kind": "guideline"
+ },
+ {
+  "doc_id": "guide-xi-streams",
+  "file": "guideline_class_xi_streams.txt",
+  "kind": "guideline"
+ },
+ {
+  "doc_id": "guide-geography",
+  "file": "guideline_school_access_and_transport.md",
+  "kind": "guideline"
+ },
+ {
+  "doc_id": "note-sch-360501161",
+  "file": "school_note_360501161.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-637073212",
+  "file": "school_note_637073212.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-359684982",
+  "file": "school_note_359684982.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-359329404",
+  "file": "school_note_359329404.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-1469812433",
+  "file": "school_note_1469812433.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-359503327",
+  "file": "school_note_359503327.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-517920587",
+  "file": "school_note_517920587.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-1035913079",
+  "file": "school_note_1035913079.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-284535702",
+  "file": "school_note_284535702.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-5341865",
+  "file": "school_note_5341865.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-348890269",
+  "file": "school_note_348890269.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-348917732",
+  "file": "school_note_348917732.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-350304682",
+  "file": "school_note_350304682.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-348884264",
+  "file": "school_note_348884264.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-358021840",
+  "file": "school_note_358021840.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-5341672",
+  "file": "school_note_5341672.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-1095713427",
+  "file": "school_note_1095713427.md",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "note-sch-359096852",
+  "file": "school_note_359096852.txt",
+  "kind": "school_note"
+ },
+ {
+  "doc_id": "town-kolkata-north",
+  "file": "town_note_kolkata_north.md",
+  "kind": "town_note"
+ },
+ {
+  "doc_id": "town-kolkata-south",
+  "file": "town_note_kolkata_south.txt",
+  "kind": "town_note"
+ },
+ {
+  "doc_id": "town-darjeeling",
+  "file": "town_note_darjeeling.md",
+  "kind": "town_note"
+ },
+ {
+  "doc_id": "note-community-post",
+  "file": "community_board_post.txt",
+  "kind": "untrusted_note"
+ },
+ {
+  "doc_id": "dir-asansol",
+  "file": "school_directory_asansol.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-balasore",
+  "file": "school_directory_balasore.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-barasat",
+  "file": "school_directory_barasat.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-bardhaman",
+  "file": "school_directory_bardhaman.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-berhampur",
+  "file": "school_directory_berhampur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-bhagalpur",
+  "file": "school_directory_bhagalpur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-bhubaneswar",
+  "file": "school_directory_bhubaneswar.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-bokaro",
+  "file": "school_directory_bokaro.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-cooch behar",
+  "file": "school_directory_cooch behar.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-cuttack",
+  "file": "school_directory_cuttack.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-darjeeling",
+  "file": "school_directory_darjeeling.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-dhanbad",
+  "file": "school_directory_dhanbad.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-durgapur",
+  "file": "school_directory_durgapur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-gangtok",
+  "file": "school_directory_gangtok.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-gaya",
+  "file": "school_directory_gaya.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-howrah",
+  "file": "school_directory_howrah.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-jalpaiguri",
+  "file": "school_directory_jalpaiguri.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-jamshedpur",
+  "file": "school_directory_jamshedpur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-kalyani",
+  "file": "school_directory_kalyani.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-kharagpur",
+  "file": "school_directory_kharagpur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-kishanganj",
+  "file": "school_directory_kishanganj.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-kolkata",
+  "file": "school_directory_kolkata.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-krishnanagar",
+  "file": "school_directory_krishnanagar.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-malda",
+  "file": "school_directory_malda.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-murshidabad",
+  "file": "school_directory_murshidabad.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-muzaffarpur",
+  "file": "school_directory_muzaffarpur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-patna",
+  "file": "school_directory_patna.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-puri",
+  "file": "school_directory_puri.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-purnia",
+  "file": "school_directory_purnia.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-rajshahi",
+  "file": "school_directory_rajshahi.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-ranchi",
+  "file": "school_directory_ranchi.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-rourkela",
+  "file": "school_directory_rourkela.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-sambalpur",
+  "file": "school_directory_sambalpur.md",
+  "kind": "directory"
+ },
+ {
+  "doc_id": "dir-siliguri",
+  "file": "school_directory_siliguri.md",
+  "kind": "directory"
+ }
+]

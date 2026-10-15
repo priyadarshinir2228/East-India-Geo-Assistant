@@ -1,0 +1,35 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0,
+    "analysis": {"analyzer": {"en_text": {"type": "english"}}}
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "chunk_id":    {"type": "keyword"},
+      "doc_id":      {"type": "keyword"},
+      "file":        {"type": "keyword"},
+      "doc_kind":    {"type": "keyword"},
+      "title":       {"type": "text", "analyzer": "en_text"},
+      "text":        {"type": "text", "analyzer": "en_text"},
+      "page":        {"type": "integer"},
+      "start":       {"type": "integer"},
+      "end":         {"type": "integer"},
+      "n_chars":     {"type": "integer"},
+      "issued_date": {"type": "date"},
+      "boards":      {"type": "keyword"},
+      "entity_ids":  {"type": "keyword"},
+      "school_ids":  {"type": "keyword"},
+      "location":    {"type": "geo_point"},
+      "embedding": {
+        "type": "dense_vector", "dims": __DIMS__, "similarity": "cosine", "index": true,
+        "index_options": {"type": "int8_hnsw", "m": 16, "ef_construction": 100}
+      },
+      "embedding_f32": {
+        "type": "dense_vector", "dims": __DIMS__, "similarity": "cosine", "index": true,
+        "index_options": {"type": "hnsw", "m": 16, "ef_construction": 100}
+      }
+    }
+  }
+}

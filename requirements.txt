@@ -1,0 +1,22 @@
+# Python 3.10 or newer. CPU-only PyTorch is enough:
+#   pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
+elasticsearch==8.17.2
+requests==2.32.3
+python-dotenv==1.1.0
+numpy==2.2.6
+networkx==3.4.2
+shapely==2.1.1
+pyproj==3.7.1
+geopandas==1.1.1
+pyogrio==0.11.0
+scikit-learn==1.6.1
+pypdf==5.6.0
+fpdf2==2.8.3
+jsonschema==4.23.0
+rapidfuzz==3.13.0
+sentence-transformers==4.1.0
+transformers==4.52.4
+streamlit==1.45.1
+psutil==7.0.0
+pytest==8.3.5
+huggingface-hub==0.36.2
