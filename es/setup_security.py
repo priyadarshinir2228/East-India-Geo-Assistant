@@ -20,6 +20,10 @@ ROLE = {
 def main():
     es = admin_client()
     es.security.put_role(name="rag_app", **ROLE)
+    # Revoke keys from earlier runs, so only the key in .env works
+    old = es.security.invalidate_api_key(name="rag_app_key")
+    if old["invalidated_api_keys"]:
+        print(f"invalidated {len(old['invalidated_api_keys'])} older rag_app key(s)")
     key = es.security.create_api_key(name="rag_app_key", role_descriptors={"rag_app": ROLE})
     env = config.ROOT / ".env"
     text = env.read_text(encoding="utf-8") if env.exists() else ""

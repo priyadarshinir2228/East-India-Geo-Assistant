@@ -62,6 +62,16 @@ streamlit run app/streamlit_app.py
 
 The data the services need is already in the repository: the corpus in `data/corpus/`, the evaluation files in `data/eval/`, and the GeoServer layers in `data/geoserver/east_india.gpkg`. The scripts in `scripts/` (`world.py`, `make_layers.py`, `make_corpus.py`, `make_questions.py`) rebuild them from `data/raw/schools.gpkg` and are deterministic.
 
+### Windows notes (the laptop used for the demo)
+
+- **Python.** `.venv` is created from the system Python 3.12.10 (`C:\Users\ASUS\AppData\Local\Programs\Python\Python312`). `python -m scripts.check_env` checks every pinned package, the tools, the ports and the services in one go.
+- **huggingface-hub.** transformers 4.52.4 refuses huggingface-hub 1.x or later, so `requirements.txt` pins `huggingface-hub==0.36.2`.
+- **llama-server.** CMake 4.4 is installed, but building llama.cpp from source also needs the Visual Studio C++ Build Tools. The demo uses the official prebuilt CPU release instead (`llama-b11622-bin-win-cpu-x64.zip` from github.com/ggml-org/llama.cpp), unpacked to `D:\llama-bin`:
+  `D:\llama-bin\llama-server.exe -m models\Qwen2.5-3B-Instruct-Q4_K_M.gguf --host 127.0.0.1 --port 8081 -c 8192 --jinja`
+- **VS Code.** `.vscode/tasks.json` has one task per step (services, llama-server, status, setup, ingest, eval, CLI, Streamlit, tests). Each runs in its own terminal: Ctrl+Shift+P, then "Tasks: Run Task".
+- **Run only one llama-server.** A second one on the same port breaks the requests that are in flight.
+- **pytest** only collects `tests/` (`pytest.ini`), so the bundled llama.cpp tests are skipped.
+
 ### Notes
 
 - **Index names.** The brief names the indices "East India_chunks", "East India_entities" and "East India_relations". Elasticsearch rejects upper-case letters and spaces in index names, so they are `east_india_chunks`, `east_india_entities` and `east_india_relations`.

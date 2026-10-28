@@ -2,10 +2,10 @@
 
 | Component | Model | Context / size | Speed | Memory | Output |
 |---|---|---|---|---|---|
-| LLM | models\Qwen2.5-3B-Instruct-Q4_K_M.gguf | n_ctx=8192 | 2.8 tok/s | see llama-server log / Task Manager | text + logprobs=True |
-| embedder | BAAI/bge-small-en-v1.5 | dims=384 | 169 texts/s | +484 MB | unit vector, norm=1.00 |
-| embedder | intfloat/e5-base-v2 | dims=768 | 35 texts/s | +352 MB | unit vector, norm=1.00 |
-| reranker | BAAI/bge-reranker-base | max_length=512 | - | +574 MB | raw logit per pair, e.g. 8.80 vs -10.19 |
+| LLM | models\Qwen2.5-3B-Instruct-Q4_K_M.gguf | n_ctx=8192 | 5.4 tok/s | see llama-server log / Task Manager | text + logprobs=True |
+| embedder | BAAI/bge-small-en-v1.5 | dims=384 | 221 texts/s | +484 MB | unit vector, norm=1.00 |
+| embedder | intfloat/e5-base-v2 | dims=768 | 49 texts/s | +344 MB | unit vector, norm=1.00 |
+| reranker | BAAI/bge-reranker-base | max_length=512 | - | +441 MB | raw logit per pair, e.g. 8.80 vs -10.19 |
 
 LLM parameter count and quantisation come from the GGUF file name and the llama-server start-up log.
 
